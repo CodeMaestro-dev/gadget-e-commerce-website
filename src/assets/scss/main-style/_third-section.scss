@@ -1,0 +1,9 @@
+.main {
+  &__third-section {
+    padding: 80px 135px 70px 135px;
+
+    @media screen and (max-width: 1360px) {
+      padding-inline: 30px;
+    }
+  }
+}

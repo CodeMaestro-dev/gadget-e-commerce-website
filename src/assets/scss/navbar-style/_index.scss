@@ -1,0 +1,76 @@
+@use "../globals" as globals;
+
+.navbar {
+  display: flex;
+  align-items: center;
+  padding: 40px 135px 16px 135px;
+  border-bottom: 0.5px solid globals.$web-border-colour;
+
+  @media screen and (max-width: 1600px) {
+    padding-inline: 30px;
+  }
+
+  @media screen and (max-width: 1040px) {
+    justify-content: space-between;
+  }
+
+  @media screen and (max-width: 670px) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__links {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    flex: 1;
+
+    & > li:first-of-type {
+      text-decoration: underline;
+    }
+
+    @media screen and (max-width: 1040px) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    display: flex;
+
+    @media screen and (max-width: 500px) {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }   
+
+    &__search {
+      background-color: globals.$web-secondary;
+      padding: 10px 20px 10px 20px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      margin-inline-end: 24px;
+
+      & input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        margin-inline-end: 24px;
+      }
+
+      & label {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+      }
+    }
+
+    &__extras {
+      display: flex;
+      gap: 22px;
+      align-items: center;
+    }
+  }
+}

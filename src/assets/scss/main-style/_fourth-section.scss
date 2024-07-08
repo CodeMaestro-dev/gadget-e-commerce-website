@@ -1,0 +1,9 @@
+.main {
+  &__fourth-section {
+    padding: 80px 135px 140px 135px;
+
+    @media screen and (max-width: 1360px) {
+      padding-inline: 30px;
+    }
+  }
+}

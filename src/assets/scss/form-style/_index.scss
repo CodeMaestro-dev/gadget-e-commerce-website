@@ -1,0 +1,132 @@
+@use "../globals" as globals;
+@use "../utils" as utils;
+
+.main-form {
+  padding: 60px 135px 140px 0px;
+  display: flex;
+  gap: 129px;
+
+  @media screen and (max-width: 1180px) {
+    padding: 60px 30px 140px 30px;
+    gap: 10px;
+  }
+
+  &__image {
+    @media screen and (max-width: 1180px) {
+      width: 50%;
+
+      & img {
+        width: 100%;
+      }
+    }
+
+    @media screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 1180px) {
+      width: 50%;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+
+    & form {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+      width: 371px;
+      @media screen and (max-width: 1180px) {
+        width: 100%;
+      }
+
+      & p {
+        text-align: center;
+      }
+    }
+
+    &--headers {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      & h1 {
+        font-size: 36px;
+        font-family: "Inter", sans-serif;
+      }
+
+      & p {
+        width: fit-content;
+      }
+    }
+
+    &--input {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+
+      & input {
+        border: none;
+        border-bottom: 1px solid globals.$web-border-colour;
+        padding-block-end: 8px;
+        font-size: 16px;
+      }
+
+      & input[type="submit"] {
+        border: none;
+        border-radius: 4px;
+        background-color: globals.$web-reddish-brown;
+        color: globals.$web-secondary;
+        padding: 16px 122px;
+        font-family: utils.$web-font;
+        cursor: pointer;
+      }
+
+      & button {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        border-radius: 4px;
+        padding: 16px 86px;
+        background-color: globals.$web-white;
+        border: 1px solid globals.$web-border-colour;
+        cursor: pointer;
+      }
+
+      & input:focus {
+        border: none;
+        outline: none;
+        border-bottom: 1px solid globals.$web-reddish-brown;
+      }
+    }
+
+    &--footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      & input[type="submit"] {
+        padding: 16px 48px;
+      }
+
+      & p {
+        color: globals.$web-reddish-brown;
+      }
+    }
+  }
+}
+
+.form-link {
+  border-bottom: 1px solid globals.$web-border-colour;
+}
+
+.w-143px {
+  width: 143px;
+}

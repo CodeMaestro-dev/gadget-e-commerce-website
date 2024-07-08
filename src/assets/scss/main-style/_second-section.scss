@@ -1,0 +1,38 @@
+@use "../globals" as globals;
+
+.main {
+  &__second-section {
+    display: flex;
+    flex-direction: column;
+    padding-block: 140px 176px;
+    padding-inline-start: 135px;
+
+    @media screen and (max-width: 1360px) {
+      padding-inline: 30px;
+    }
+
+    &--first {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      gap: 30px;
+      overflow: auto;
+
+      @media screen and (max-width: 1230px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media screen and (max-width: 950px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &--button {
+      margin-block-start: 60px;
+      margin-inline: auto;
+    }
+
+    &--button:hover {
+      cursor: pointer;
+    }
+  }
+}

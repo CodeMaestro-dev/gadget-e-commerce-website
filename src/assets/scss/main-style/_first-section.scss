@@ -1,0 +1,106 @@
+@use "../globals" as globals;
+
+.main {
+  &__first-section {
+    padding-inline: 135px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    @media screen and (max-width: 1360px) {
+      padding-inline: 30px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__nav {
+      border-right: 0.5px solid globals.$web-border-colour;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      padding-block-start: 40px;
+      padding-inline-end: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+
+      & li:first-of-type,
+      & li:nth-of-type(2) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    &__image-display {
+      margin-block-start: 40px;
+      grid-column-start: 4;
+      grid-column-end: 13;
+      background-color: globals.$web-black;
+      color: globals.$web-light-gray;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 54px 64px 11px;
+
+      &--flex {
+        display: flex;
+        justify-content: space-between;
+        gap: 38px;
+
+        @media screen and (max-width: 970px) {
+          display: flex;
+          flex-direction: column;
+        }
+
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+          @media screen and (max-width: 970px) {
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        & > div:last-of-type {
+          @media screen and (max-width: 560px) {
+            & img {
+              width: 100%;
+            }
+          }
+        }
+
+        &-text {
+          display: flex;
+          align-items: center;
+          gap: 24px;
+          & span {
+            font-size: 14px;
+            text-wrap: nowrap;
+          }
+        }
+
+        &-large {
+          font-size: 48px;
+          line-height: 60px;
+          letter-spacing: 4px;
+          font-weight: 600;
+          margin-block: 20px 22px;
+          @media screen and (max-width: 830px) {
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+.shop-now-flex {
+  display: flex;
+  align-items: center;
+  gap: 11.5px;
+}

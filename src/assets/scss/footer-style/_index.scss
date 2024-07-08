@@ -1,0 +1,92 @@
+@use "../globals" as globals;
+
+.footer {
+  background-color: globals.$web-black;
+  color: globals.$web-secondary;
+
+  &__first {
+    padding: 80px 135px 24px;
+    display: flex;
+    gap: 87px;
+    justify-content: center;
+    border-bottom: 0.5px solid globals.$web-border-colour;
+
+    @media screen and (max-width: 1600px) {
+      padding-inline: 30px;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    @media screen and (max-width: 960px) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & ul {
+      & li:first-of-type {
+        margin-block-end: 24px;
+      }
+
+      & li:not(:first-of-type) {
+        margin-block: 16px 16px;
+      }
+    }
+
+    &--email {
+      border: 1px solid globals.$web-secondary;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      padding: 12px;
+      border-radius: 4px;
+      @media screen and (max-width: 960px) {
+        width: fit-content;
+      }
+
+      & input {
+        background-color: transparent;
+        outline: none;
+        border: none;
+        color: globals.$web-secondary;
+      }
+
+      & button {
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+      }
+    }
+
+    &--images {
+      display: flex;
+      gap: 13px;
+      margin-block: 8px 24px;
+
+      & div:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+      }
+    }
+
+    &--handles {
+      display: flex;
+      gap: 24px;
+    }
+
+    &--address {
+      width: 175px;
+    }
+  }
+
+  &__second {
+    & p {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: globals.$web-white;
+      gap: 6px;
+      padding-block: 16px;
+    }
+  }
+}

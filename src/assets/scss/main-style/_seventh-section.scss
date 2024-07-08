@@ -1,0 +1,109 @@
+@use "../globals" as globals;
+
+.main {
+  &__seventh-section {
+    padding: 71px 135px 140px;
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (max-width: 1360px) {
+      padding-inline: 30px;
+    }
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 30px;
+
+      @media screen and (max-width: 1230px) {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &--left {
+        grid-column-start: 1;
+        grid-column-end: 7;
+        background-color: globals.$web-black;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        border-radius: 4px;
+
+        & img {
+          @media screen and (max-width: 690px) {
+            width: 100%;
+          }
+        }
+      }
+
+      &--right {
+        grid-column-start: 7;
+        grid-column-end: 13;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        & > div:last-of-type {
+          @media screen and (max-width: 630px) {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+
+        &--first {
+          background-color: #0d0d0d;
+          position: relative;
+          display: flex;
+          justify-content: flex-end;
+          border-radius: 4px;
+
+          & img {
+            width: 432px;
+            height: 286px;
+
+            @media screen and (max-width: 630px) {
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+
+        &--first + div {
+          display: flex;
+          gap: 30px;
+          width: 100%;
+        }
+
+        &--second {
+          padding: 31px 30px;
+          background-color: globals.$web-black;
+          position: relative;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          border-radius: 4px;
+
+          @media screen and (max-width: 630px) {
+            justify-content: end;
+            width: 100%;
+          }
+        }
+
+        &--third {
+          padding: 30px 24px;
+          background-color: globals.$web-black;
+          position: relative;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          border-radius: 4px;
+
+          @media screen and (max-width: 630px) {
+            justify-content: end;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

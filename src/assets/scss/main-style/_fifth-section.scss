@@ -1,0 +1,78 @@
+@use "../globals" as globals;
+
+.main {
+  &__fifth-section {
+    padding-inline: 135px;
+
+    @media screen and (max-width: 1360px) {
+      padding-inline: 30px;
+    }
+
+    &__container {
+      padding-inline: 56px 44px;
+      display: flex;
+      gap: 27px;
+      align-items: center;
+      justify-content: space-between;
+      background-color: globals.$web-black;
+
+      @media screen and (max-width: 1260px) {
+        display: flex;
+        flex-direction: column;
+        padding-block: 30px;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &--content {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+
+        @media screen and (max-width: 1260px) {
+          align-items: center;
+          justify-content: center;
+        }
+
+        & h3 {
+          font-size: 16px;
+          font-weight: 600;
+          color: globals.$web-green;
+        }
+
+        & h4 {
+          color: globals.$web-secondary;
+          font-size: 48px;
+          width: 14ch;
+          @media screen and (max-width: 1260px) {
+            width: 100%;
+            text-align: center;
+          }
+
+          @media screen and (max-width: 360px) {
+            font-size: 30px;
+          }
+        }
+
+        & > div {
+          display: flex;
+          gap: 24px;
+          margin-block-end: 2px;
+
+          @media screen and (max-width: 630px) {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+
+      &--img {
+        & img {
+          @media screen and (max-width: 650px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+@use "../globals/" as globals;
+
+.banner {
+  color: globals.$web-white;
+  background-color: globals.$web-black;
+  padding-block: 15px;
+  display: flex;
+  gap: 231px;
+  padding-inline: 445px 136px;
+
+  @media screen and (max-width: 1600px) {
+    padding-inline: 30px;
+    justify-content: space-between;
+    gap: 0px;
+  }
+
+  @media screen and (max-width: 1600px) {
+    padding-inline: 30px;
+    justify-content: space-between;
+    gap: 0px;
+  }
+  @media screen and (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__language-dropdown {
+    background-color: transparent;
+    color: globals.$web-white;
+    border: none;
+  }
+
+  & p {
+    @media screen and (max-width: 800px) {
+      text-align: center;
+    }
+  }
+
+  & span {
+    margin-inline-start: 8px;
+
+    @media screen and (max-width: 800px) {
+      margin-inline-start: 0px;
+    }
+  }
+}
+
+.text-underline {
+  text-decoration: underline;
+}
