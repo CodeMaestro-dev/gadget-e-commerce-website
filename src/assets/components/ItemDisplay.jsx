@@ -45,6 +45,13 @@ const ItemDisplay = ({
           {!showTrash ? <img src={eye} alt="" /> : <></>}
           {showTrash ? <img src={trash} alt="" /> : <></>}
         </div>
+        {addToCartButton ? (
+          <button className="add-to-cart">
+            <p>Add To Cart</p>
+          </button>
+        ) : (
+          <></>
+        )}
       </div>
       <div className="image-display__footer">
         <p className="image-display__footer--label">{label}</p>

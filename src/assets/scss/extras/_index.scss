@@ -425,3 +425,16 @@
   gap: 30px;
   justify-content: center;
 }
+
+.add-to-cart {
+  border: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background-color: globals.$web-black;
+  color: globals.$web-secondary;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 41px;
+  cursor: pointer;
+}
